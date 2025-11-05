@@ -1,3 +1,5 @@
+cd ~/netology-disaster-recovery
+
 cat > README.md << 'EOF'
 # Домашнее задание к занятию «Disaster recovery и Keepalived»
 **Студент:** Дудников Даниил
@@ -32,12 +34,11 @@ cat > README.md << 'EOF'
 Настройка сервиса Keepalived для использования плавающего IP с отслеживанием состояния веб-сервера.
 
 ### Выполненные работы:
-- Установлен и настроен nginx на порту 8080
-- Создан bash-скрипт для проверки доступности порта и файла index.html
-- Настроен Keepalived с отслеживанием каждые 3 секунды
-- Демонстрировано переключение VIP при недоступности веб-сервера
 
-### Bash-скрипт проверки:
+#### 1. Установлен и настроен nginx на порту 8080
+![Nginx на порту 8080](task2-keepalived/keepalived_configuration_files.png.png)
+
+#### 2. Создан bash-скрипт для проверки доступности порта и файла index.html
 ```bash
 #!/bin/bash
 if ! nc -z localhost 8080 &>/dev/null; then
