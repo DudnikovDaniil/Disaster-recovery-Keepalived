@@ -1,5 +1,3 @@
-cd ~/netology-disaster-recovery
-
 cat > README.md << 'EOF'
 # Домашнее задание к занятию «Disaster recovery и Keepalived»
 **Студент:** Дудников Даниил
@@ -23,16 +21,10 @@ cat > README.md << 'EOF'
 #### Настройки HSRP на маршрутизаторах:
 ![Настройки HSRP](task1-cisco/hsrp_configuration.png.png)
 
-### Файлы задания 1:
-
-#### Схема сети Cisco Packet Tracer:
-`task1-cisco/hsrp_track_interface.pkt` - файл схемы
-
-![Настройки маршрутизаторов](task1-cisco/hsrp_configuration.png.png)
-`task1-cisco/hsrp_configuration.png.png` - настройки маршрутизаторов
-
-![Схема с проверкой связи](task1-cisco/network_topology_ping_test.png.png)
-`task1-cisco/network_topology_ping_test.png.png` - схема с проверкой связи
+### Файлы:
+- `task1-cisco/hsrp_track_interface.pkt` - схема сети Cisco Packet Tracer
+- `task1-cisco/hsrp_configuration.png.png` - настройки маршрутизаторов
+- `task1-cisco/network_topology_ping_test.png.png` - схема с проверкой связи
 
 ## Задание 2: Keepalived на Linux
 
