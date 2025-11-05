@@ -67,3 +67,9 @@ exit 0
 
 #### VIP на резервном сервере:
 ![VIP на сервере 2](task2-keepalived/vip_on_server2.png)
+
+### Файлы:
+- `task2-keepalived/` - конфигурационные файлы и скрипты Keepalived
+- `task2-keepalived/keepalived.conf` - основной конфигурационный файл
+- `task2-keepalived/check_web_server.sh` - скрипт проверки веб-сервера
+EOF
