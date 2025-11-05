@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # Домашнее задание к занятию «Disaster recovery и Keepalived»
 **Студент:** Дудников Даниил
 
