@@ -55,3 +55,15 @@ if [ ! -s "/var/www/mysite/index.html" ]; then
 fi
 echo "Web server check passed"
 exit 0
+
+#### 3. Настроен Keepalived с отслеживанием каждые 3 секунды
+![Конфигурация Keepalived](task2-keepalived/keepalived_configuration_files.png)
+
+#### 4. Демонстрировано переключение VIP при недоступности веб-сервера
+![Переключение VIP](task2-keepalived/vip_switch_demonstration.png)
+
+#### Логи переключения Keepalived:
+![Логи Keepalived](task2-keepalived/keepalived_switch_logs.png)
+
+#### VIP на резервном сервере:
+![VIP на сервере 2](task2-keepalived/vip_on_server2.png)
