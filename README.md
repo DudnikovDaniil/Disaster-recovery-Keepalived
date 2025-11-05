@@ -56,6 +56,8 @@ fi
 echo "Web server check passed"
 exit 0
 
+```
+
 #### 3. Настроен Keepalived с отслеживанием каждые 3 секунды
 ![Конфигурация Keepalived](task2-keepalived/keepalived_configuration_files.png)
 
