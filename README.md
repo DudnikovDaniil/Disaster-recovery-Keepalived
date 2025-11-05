@@ -1,3 +1,4 @@
+cat > README.md << 'EOF'
 # Домашнее задание к занятию «Disaster recovery и Keepalived»
 **Студент:** Дудников Даниил
 
@@ -14,21 +15,16 @@
 
 ### Демонстрация работы:
 
-#### Схема сети:
-![Схема сети](task1-cisco/network_topology_ping_test.png)
+#### Схема сети с проверкой связи:
+![Схема сети](task1-cisco/network_topology_ping_test.png.png)
 
-#### Настройки HSRP:
-![Настройки HSRP](task1-cisco/hsrp_configuration.png)
-
-#### Проверка связи:
-- Ping между PC0 (192.168.0.250) и Server0 (192.168.1.50) успешен
-- При обрыве соединения HSRP автоматически переключает активную роль
-- Связь сохраняется благодаря резервному маршрутизатору
+#### Настройки HSRP на маршрутизаторах:
+![Настройки HSRP](task1-cisco/hsrp_configuration.png.png)
 
 ### Файлы:
-- `task1-cisco/network_topology.pkt` - схема сети Cisco Packet Tracer
-- `task1-cisco/hsrp_configuration.png` - настройки маршрутизаторов
-- `task1-cisco/network_topology_ping_test.png` - схема с проверкой связи
+- `task1-cisco/hsrp_track_interface.pkt` - схема сети Cisco Packet Tracer
+- `task1-cisco/hsrp_configuration.png.png` - настройки маршрутизаторов
+- `task1-cisco/network_topology_ping_test.png.png` - схема с проверкой связи
 
 ## Задание 2: Keepalived на Linux
 
