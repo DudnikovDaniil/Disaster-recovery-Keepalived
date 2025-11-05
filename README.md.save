@@ -18,15 +18,15 @@ cat > README.md << 'EOF'
 ### Демонстрация работы:
 
 #### Схема сети с проверкой связи:
-![Схема сети](task1-cisco/network_topology_ping_test.png)
+task2-keepalived/keepalived_configuration_files.png
 
 #### Настройки HSRP на маршрутизаторах:
-![Настройки HSRP](task1-cisco/hsrp_configuration.png)
+![Настройки HSRP](task1-cisco/hsrp_configuration.png.png)
 
 ### Файлы:
 - `task1-cisco/hsrp_track_interface.pkt` - схема сети Cisco Packet Tracer
-- `task1-cisco/hsrp_configuration.png` - настройки маршрутизаторов
-- `task1-cisco/network_topology_ping_test.png` - схема с проверкой связи
+- `task1-cisco/hsrp_configuration.png.png` - настройки маршрутизаторов
+- `task1-cisco/network_topology_ping_test.png.png` - схема с проверкой связи
 
 ## Задание 2: Keepalived на Linux
 
@@ -36,7 +36,7 @@ cat > README.md << 'EOF'
 ### Выполненные работы:
 
 #### 1. Установлен и настроен nginx на порту 8080
-![Nginx на порту 8080](task2-keepalived/keepalived_configuration_files.png)
+![Nginx на порту 8080](task2-keepalived/keepalived_configuration_files.png.png)
 
 #### 2. Создан bash-скрипт для проверки доступности порта и файла index.html
 ```bash
