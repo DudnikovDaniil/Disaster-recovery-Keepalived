@@ -2,31 +2,59 @@
 **Студент:** Дудников Даниил
 
 ## Задание 1: HSRP в Cisco Packet Tracer
-- Настроено отслеживание интерфейсов для HSRP групп
-- Демонстрация автоматического переключения при обрыве связи
-- Проверена работоспособность сети между PC0 и Server0
+
+### Цель:
+Настройка отслеживания интерфейсов для протокола HSRP и демонстрация автоматического переключения при обрыве связи.
+
+### Выполненные работы:
+- Настроено отслеживание интерфейсов Gi0/1 для группы 0 HSRP
+- Настроено отслеживание интерфейсов Gi0/0 для группы 1 HSRP  
+- Проверена отказоустойчивость при обрыве соединения
+- Доказана работоспособность сети между PC0 и Server0 после переключения
+
+### Демонстрация работы:
+
+#### Схема сети:
+![Схема сети](task1-cisco/network_topology_ping_test.png)
+
+#### Настройки HSRP:
+![Настройки HSRP](task1-cisco/hsrp_configuration.png)
+
+#### Проверка связи:
+- Ping между PC0 (192.168.0.250) и Server0 (192.168.1.50) успешен
+- При обрыве соединения HSRP автоматически переключает активную роль
+- Связь сохраняется благодаря резервному маршрутизатору
 
 ### Файлы:
-- `task1-cisco/network_topology.pkt` - схема сети
+- `task1-cisco/network_topology.pkt` - схема сети Cisco Packet Tracer
 - `task1-cisco/hsrp_configuration.png` - настройки маршрутизаторов
-- `task1-cisco/network_topology_ping_test.png` - проверка связи
+- `task1-cisco/network_topology_ping_test.png` - схема с проверкой связи
 
 ## Задание 2: Keepalived на Linux
-- Настроен веб-сервер nginx на порту 8080
-- Создан bash-скрипт проверки порта и файла index.html
+
+### Цель:
+Настройка сервиса Keepalived для использования плавающего IP с отслеживанием состояния веб-сервера.
+
+### Выполненные работы:
+- Установлен и настроен nginx на порту 8080
+- Создан bash-скрипт для проверки доступности порта и файла index.html
 - Настроен Keepalived с отслеживанием каждые 3 секунды
-- Демонстрация переключения VIP при недоступности сервиса
+- Демонстрировано переключение VIP при недоступности веб-сервера
 
-### Файлы:
-- `task2-keepalived/keepalived.conf` - конфигурация MASTER
-- `task2-keepalived/keepalived_backup.conf` - конфигурация BACKUP  
-- `task2-keepalived/check_web_server.sh` - bash-скрипт проверки
-- `task2-keepalived/keepalived_configuration_files.png` - конфиги и скрипт
-- `task2-keepalived/keepalived_switch_logs.png` - логи переключения
-- `task2-keepalived/vip_switch_demonstration.png` - демонстрация VIP
-- `task2-keepalived/vip_on_server2.png` - VIP на backup сервере
-
-## Результаты:
-- Отработаны механизмы отказоустойчивости HSRP и Keepalived
-- Системы корректно переключаются при неисправностях
-- Обеспечивается высокая доступность сетевых сервисов
+### Bash-скрипт проверки:
+```bash
+#!/bin/bash
+if ! nc -z localhost 8080 &>/dev/null; then
+    echo "Web server port 8080 is not available"
+    exit 1
+fi
+if [ ! -f "/var/www/mysite/index.html" ]; then
+    echo "index.html does not exist" 
+    exit 1
+fi
+if [ ! -s "/var/www/mysite/index.html" ]; then
+    echo "index.html is empty"
+    exit 1
+fi
+echo "Web server check passed"
+exit 0
